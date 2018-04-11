@@ -217,8 +217,7 @@ function buildLevelMenu() {
   for (let i = 0; i < levels.length; i++) {
     const level = levels[i];
     const item = document.createElement("a");
-    $(item).html("<span class='checkmark'></span><span class='level-number'>"
-      + (i + 1) + "</span>" + level.syntax);
+    $(item).html("<span class='checkmark'></span><span class='level-number'>" + (i + 1) + "</span>" + level.syntax);
     $(".level-menu .levels").append(item);
 
     if (checkCompleted(i)) {
@@ -411,7 +410,7 @@ function fireRule(rule) {
     ruleSelected.removeClass("strobe");
     ruleSelected.addClass("clean");
     $("input").val("");
-    $(".input-wrapper").css("opacity", .2);
+    $(".input-wrapper").css("opacity", 0.2);
     updateProgressUI(currentLevel, true);
     currentLevel++;
 
@@ -506,8 +505,7 @@ function getMarkup(el) {
   let attributeString = "";
   $.each(el.attributes, function () {
     if (this.specified) {
-      attributeString = attributeString + ' ' + this.name + '="' + this.value
-        + '"';
+      attributeString = attributeString + ' ' + this.name + '="' + this.value + '"';
     }
   });
   let attributeSpace = "";
@@ -545,8 +543,7 @@ function loadBoard() {
     $(".table *").addClass("pop");
   }
 
-  $(".markup").html('<div>&ltdiv class="table"&gt' + markupHolder.html()
-    + '&lt/div&gt</div>');
+  $(".markup").html('<div>&ltdiv class="table"&gt' + markupHolder.html() + '&lt/div&gt</div>');
 }
 
 function addNametags() {
@@ -599,8 +596,7 @@ function loadLevel() {
   loadBoard();
   resetTable();
 
-  $(".level-header .level-text").html("Level " + (currentLevel + 1) + " of "
-    + levels.length);
+  $(".level-header .level-text").html("Level " + (currentLevel + 1) + " of " + levels.length);
 
   updateProgressUI(currentLevel, checkCompleted(currentLevel));
 
@@ -630,16 +626,13 @@ function PopupCenter(url, title, w, h) {
     : screen.top;
 
   const width = window.innerWidth ? window.innerWidth
-    : document.documentElement.clientWidth
-      ? document.documentElement.clientWidth : screen.width;
+    : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
   const height = window.innerHeight ? window.innerHeight
-    : document.documentElement.clientHeight
-      ? document.documentElement.clientHeight : screen.height;
+    : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
 
   const left = ((width / 2) - (w / 2)) + dualScreenLeft;
   const top = ((height / 2) - (h / 2)) + dualScreenTop;
-  const newWindow = window.open(url, title, 'scrollbars=yes, width=' + w
-    + ', height=' + h + ', top=' + top + ', left=' + left);
+  const newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
 
   // Puts focus on the newWindow
   if (window.focus) {

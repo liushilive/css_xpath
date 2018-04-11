@@ -172,7 +172,7 @@ var levels_xpath = [
 <orange class="small stuff"/>
 </bento>
 <bento>
-<apple class="small stuff"/>
+<orange/>
 </bento>
 <bento>
 <orange class="small stuff"/>
@@ -191,18 +191,13 @@ var levels_xpath = [
       '<strong>//a|//p|//div</strong> 将选择所有 <tag>a</tag>, <tag>p</tag> 与 <tag>div</tag> 元素'
     ],
     boardMarkup: `
-    <pickle class="small stuff"/>
 <pickle/>
 <plate>
-<pickle/>
 </plate>
 <bento>
-<pickle/>
 </bento>
 <plate>
-<pickle/>
 </plate>
-<pickle/>
 <pickle class="small stuff"/>
     `
   },
