@@ -164,7 +164,6 @@ var levels_xpath = [
     helpTitle: "你能行...",
     help: '把你在前几级别学到的东西结合起来解决这个问题！',
     boardMarkup: `
-    <apple/>
 <plate>
 <orange class="small stuff"/>
 </plate>
