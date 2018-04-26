@@ -57,7 +57,7 @@ var levels_xpath = [
     helpTitle: "选择元素的直接子元素",
     help: "你可以选择其他元素的直接子元素。 子元素是直接嵌套在另一个元素中的元素。 <br><br>嵌套更深的元素称为后代元素。",
     examples: [
-      '<strong>A//B</strong> 将选择所有 <strong>A</strong> 的所有子元素 <strong>B</strong>'
+      '<strong>//A/B</strong> 将选择所有 <strong>A</strong> 的所有子元素 <strong>B</strong>'
     ],
     boardMarkup: `
 <plate>
