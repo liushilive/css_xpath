@@ -2,200 +2,206 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Xpath-CSS 学习盛宴</title>
+    <meta charset="UTF-8">
+    <title>Xpath-CSS 学习盛宴</title>
 
-  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/levels_css.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/levels_xpath.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/levels_css.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/levels_xpath.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="icon" type="image/png" href="images/logo.ico">
 
-  <link rel="icon" type="image/png" href="images/logo.ico">
-
-  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css" media="screen" title="no title"
+        charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
-  <div class="left-col">
+    <div class="left-col">
 
-    <table style="text-align: left">
-      <tr>
-        <td style="color: beige">选择学习类型：</td>
-        <td>
-          <select id="select_type" title="选择学习类型" onchange="set_locator_type()">
-            <option value="XPath">XPath</option>
-            <option value="CSS">CSS</option>
-          </select>
-        </td>
-        <td><a style="color: beige" href="https://liushilive.github.io/">返回首页</a></td>
-      </tr>
+        <table style="text-align: left">
+            <tr>
+                <td style="color: beige">选择学习类型：</td>
+                <td>
+                    <select id="select_type" title="选择学习类型" onchange="set_locator_type()">
+                        <option value="XPath">XPath</option>
+                        <option value="CSS">CSS</option>
+                    </select>
+                </td>
+                <td><a style="color: beige" href="https://liushilive.github.io/">返回首页</a></td>
+            </tr>
 
-    </table>
+        </table>
 
-    <h2 class="order"></h2>
+        <h2 class="order"></h2>
 
-    <div class="note">
-      <h3>不用担心，你有这个！</h3>
-      <p>
-        您即将学习
-        <span class="note_type"></span> 选择器！将鼠标悬停在桌子上的项目上，以查看其HTML标记。
-      </p>
-      <p>获取右边选择器的帮助！ &rarr;</p>
-      <a class="note-toggle" href="#">好的，明白了！</a>
-    </div>
-    <a class="note-toggle" href="#">帮助，我被卡住了！</a>
-
-    <div class="game-wrapper">
-      <div class="table-wrapper">
-        <div class="table-surface"></div>
-        <div class="nametags"></div>
-        <div class="table"></div>
-      </div>
-      <div class="table-edge">
-        <div class="table-leg"></div>
-        <div class="table-leg"></div>
-      </div>
-    </div>
-
-    <div class="editor">
-
-      <div class="editor-pane">
-        <div class="input-header">
-          <div class="file-name">style.
-            <span class="note_type"></span>
-          </div>
-          <span class="note_type"></span> 编辑器
+        <div class="note">
+            <h3>不用担心，你有这个！</h3>
+            <p>
+                您即将学习
+                <span class="note_type"></span> 选择器！将鼠标悬停在桌子上的项目上，以查看其HTML标记。
+            </p>
+            <p>获取右边选择器的帮助！ &rarr;</p>
+            <a class="note-toggle" href="#">好的，明白了！</a>
         </div>
-        <div class="file-window css-view">
-          <div class="line-numbers">
-            1
-            <br />2
-            <br />3
-            <br />4
-            <br />5
-            <br />6
-            <br />7
-            <br />8
-            <br />9
-            <br />10
-            <br />11
-            <br />12
-            <br />13
-            <br />14
-            <br />15
-            <br />16
-            <br />17
-            <br />18
-            <br />19
-            <br />20
-          </div>
-          <input id="input-strobe" class="input-strobe" type="text" />
-          <!--<input id="input-strobe" class="input-strobe" type="text" placeholder="输入选择器代码"/>-->
-          <span class="plus">+</span>
-          <div class="enter-button">enter</div>
+        <a class="note-toggle" href="#">帮助，我被卡住了！</a>
 
-          <div class="help">
-            <br /> /*
-            <br /> 输入数字可以跳到相应的级别
-            <br /> 例如 &rarr; "5" 跳到级别 5
-            <br />
-            <br />
-            <span id="intro"></span>
-            <br /> */
-          </div>
+        <div class="game-wrapper">
+            <div class="table-wrapper">
+                <div class="table-surface"></div>
+                <div class="nametags"></div>
+                <div class="table"></div>
+            </div>
+            <div class="table-edge">
+                <div class="table-leg"></div>
+                <div class="table-leg"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="editor-pane html-view">
-        <div class="input-header">
-          <div class="file-name">table.html</div>
-          HTML Viewer
+        <div class="editor">
+
+            <div class="editor-pane">
+                <div class="input-header">
+                    <div class="file-name">style.
+                        <span class="note_type"></span>
+                    </div>
+                    <span class="note_type"></span> 编辑器
+                </div>
+                <div class="file-window css-view">
+                    <div class="line-numbers">
+                        1
+                        <br />2
+                        <br />3
+                        <br />4
+                        <br />5
+                        <br />6
+                        <br />7
+                        <br />8
+                        <br />9
+                        <br />10
+                        <br />11
+                        <br />12
+                        <br />13
+                        <br />14
+                        <br />15
+                        <br />16
+                        <br />17
+                        <br />18
+                        <br />19
+                        <br />20
+                    </div>
+                    <input id="input-strobe" class="input-strobe" type="text" />
+                    <!--<input id="input-strobe" class="input-strobe" type="text" placeholder="输入选择器代码"/>-->
+                    <span class="plus">+</span>
+                    <div class="enter-button">enter</div>
+
+                    <div class="help">
+                        <br /> /*
+                        <br /> 输入数字可以跳到相应的级别
+                        <br /> 例如 &rarr; "5" 跳到级别 5
+                        <br />
+                        <br />
+                        <span id="intro"></span>
+                        <br /> */
+                    </div>
+                </div>
+            </div>
+
+            <div class="editor-pane html-view">
+                <div class="input-header">
+                    <div class="file-name">table.html</div>
+                    HTML Viewer
+                </div>
+                <div class="file-window">
+                    <div class="line-numbers">
+                        1
+                        <br />2
+                        <br />3
+                        <br />4
+                        <br />5
+                        <br />6
+                        <br />7
+                        <br />8
+                        <br />9
+                        <br />10
+                        <br />11
+                        <br />12
+                        <br />13
+                        <br />14
+                        <br />15
+                        <br />16
+                        <br />17
+                        <br />18
+                        <br />19
+                        <br />20
+                    </div>
+                    <div class="markup"></div>
+                </div>
+            </div>
         </div>
-        <div class="file-window">
-          <div class="line-numbers">
-            1
-            <br />2
-            <br />3
-            <br />4
-            <br />5
-            <br />6
-            <br />7
-            <br />8
-            <br />9
-            <br />10
-            <br />11
-            <br />12
-            <br />13
-            <br />14
-            <br />15
-            <br />16
-            <br />17
-            <br />18
-            <br />19
-            <br />20
-          </div>
-          <div class="markup"></div>
+
+        <div class="what-is-this">
+            <h2>这是什么?</h2>
+            <p>这是一个帮助您学习CSS选择器的小游戏。输入正确的选择器完成每一级别。在右边得到帮助。</p>
+            <p>这是一项正在进行中的工作，所以请给我反馈！</p>
+            <p>创建人
+                <a href="https://liushilive.github.io/">刘士</a>。</p>
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数
+                <span id="busuanzi_value_site_uv"></span>
+                人次
+            </span>
         </div>
-      </div>
+
+        <div class="helper"></div>
+
     </div>
+    <!-- /left-col -->
 
-    <div class="what-is-this">
-      <h2>这是什么?</h2>
-      <p>这是一个帮助您学习CSS选择器的小游戏。输入正确的选择器完成每一级别。在右边得到帮助。</p>
-      <p>这是一项正在进行中的工作，所以请给我反馈！</p>
-      <p>创建人
-        <a href="https://liushilive.github.io/">刘士</a>。</p>
+    <div class="right-col">
+
+        <div class="help-wrapper">
+
+            <h1 class="level-header">
+                <span class="level-text"></span>
+                <span class="checkmark"></span>
+            </h1>
+
+            <div class="level-nav">
+                <a class="previous" href="#"></a>
+                <a class="next" href="#"></a>
+            </div>
+
+            <div class="level-progress">
+                <div class="progress"></div>
+            </div>
+
+            <div class="display-help">
+                <h3 class="selector-name"></h3>
+                <h2 class="title"></h2>
+                <h3 class="syntax"></h3>
+                <div class="hint"></div>
+                <h4 class="examples-title">例子</h4>
+                <div class="examples"></div>
+            </div>
+        </div>
+
+        <div class="level-menu">
+            <h2>Choose a level</h2>
+            <div class="levels">
+                <!-- level links are inserted here-->
+            </div>
+            <a class="reset-progress" href="#">重置进度</a>
+        </div>
+
+        <div class="level-menu-toggle-wrapper">
+            <div class="level-menu-toggle"></div>
+        </div>
+
     </div>
-
-    <div class="helper"></div>
-
-  </div>
-  <!-- /left-col -->
-
-  <div class="right-col">
-
-    <div class="help-wrapper">
-
-      <h1 class="level-header">
-        <span class="level-text"></span>
-        <span class="checkmark"></span>
-      </h1>
-
-      <div class="level-nav">
-        <a class="previous" href="#"></a>
-        <a class="next" href="#"></a>
-      </div>
-
-      <div class="level-progress">
-        <div class="progress"></div>
-      </div>
-
-      <div class="display-help">
-        <h3 class="selector-name"></h3>
-        <h2 class="title"></h2>
-        <h3 class="syntax"></h3>
-        <div class="hint"></div>
-        <h4 class="examples-title">例子</h4>
-        <div class="examples"></div>
-      </div>
-    </div>
-
-    <div class="level-menu">
-      <h2>Choose a level</h2>
-      <div class="levels">
-        <!-- level links are inserted here-->
-      </div>
-      <a class="reset-progress" href="#">重置进度</a>
-    </div>
-
-    <div class="level-menu-toggle-wrapper">
-      <div class="level-menu-toggle"></div>
-    </div>
-
-  </div>
-  <!-- /right-col -->
+    <!-- /right-col -->
 
 
 </body>
