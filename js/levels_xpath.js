@@ -232,7 +232,7 @@ var levels_xpath = [
     help: "选择所有 <strong>A</strong> 元素之后同级的 <strong>B</strong> 元素。",
     examples: [
       '<strong>//p/following-sibling::div</strong> 选择所有 <tag>p</tag> 之后的同级的 <strong>&lt;div&gt;</strong> 元素',
-      '<strong>//div//following-sibling::a</strong> 选择所有 <tag>div</tag> 之后的同级的 <tag>a</tag>  元素'
+      '<strong>//div//following-sibling::a</strong> 选择所有 <tag>div</tag> 之后的同级以及内部的 <tag>a</tag>  元素'
     ],
     boardMarkup: `
     <bento>
@@ -255,7 +255,7 @@ var levels_xpath = [
     help: "选择所有 <strong>A</strong> 元素之前同级的 <strong>B</strong> 元素。",
     examples: [
       '<strong>//p/preceding-sibling::div</strong> 选择所有 <tag>p</tag> 之前的同级的 <strong>&lt;div&gt;</strong> 元素',
-      '<strong>//div//preceding-sibling::a</strong> 选择所有 <tag>div</tag> 之前的同级的 <tag>a</tag>  元素'
+      '<strong>//div//preceding-sibling::a</strong> 选择所有 <tag>div</tag> 之前的同级以及内部的 <tag>a</tag>  元素'
     ],
     boardMarkup: `
     <bento>
