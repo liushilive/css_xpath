@@ -225,7 +225,7 @@ var levels_css = [
     </plate>`
   },
   {
-    doThis: "选择盘子旁边的每个苹果",
+    doThis: "选择盘子旁边的苹果",
     selector: "plate + apple",
     helpTitle: "选择直接跟随另一个元素的元素",
     selectorName: "相邻的兄弟选择器",
