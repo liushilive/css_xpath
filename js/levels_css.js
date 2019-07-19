@@ -454,8 +454,8 @@ var levels_css = [
   },
   {
     selectorName: "具有公式的第N类选择器",
-    doThis: "从第3个盘子开始，选择第2个盘子",
-    selector: "plate:nth-of-type(2n+3)",
+    doThis: "从第1个盘子开始选择，间隔2个选择",
+    selector: "plate:nth-of-type(2n+1)",
     syntax: ":nth-of-type(An+B)",
     help: "从第B位置开始选择，步长为A。",
     examples: [
