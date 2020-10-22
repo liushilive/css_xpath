@@ -243,7 +243,7 @@ var levels_xpath = [
 <plate></plate>
 <apple/>
 <apple class="small stuff"/>
-<apple class="small stuff"/>
+<orange class="small stuff"/>
     `
   },
   {
@@ -267,6 +267,7 @@ var levels_xpath = [
     <apple/>
     <apple class="small stuff"/>
     <apple class="small stuff"/>
+    <plate></plate>
     `
   },
   {
