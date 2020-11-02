@@ -1,9 +1,9 @@
 $.fn.xpathEvaluate = function (xpathExpression) {
-  var xpathResult = document.evaluate(xpathExpression, this[0], null,
+  let xpathResult = document.evaluate(xpathExpression, this[0], null,
     XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
 
-  var result = [];
-  var elem, $result;
+  let result = [];
+  let elem, $result;
   while (elem = xpathResult.iterateNext()) {
     result.push(elem);
   }
@@ -12,10 +12,10 @@ $.fn.xpathEvaluate = function (xpathExpression) {
   return $result;
 };
 
-var levels, locator_type, level, currentLevel, progress;
-var CSS = "CSS", XPath = "XPath";
-var levelTimeout = 1000;
-var finished = false;
+let levels, locator_type, level, currentLevel, progress;
+const CSS = "CSS", XPath = "XPath";
+const levelTimeout = 1000;
+let finished = false;
 
 $(document).ready(function () {
 
@@ -49,7 +49,7 @@ $(document).ready(function () {
   $(".level-nav").on("click", "a", function () {
 
     finished = false;
-    var direction;
+    let direction;
     if ($(this).hasClass("next")) {
       direction = "next";
     }
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
   $("input").on("keyup", function (e) {
     e.stopPropagation();
-    var length = $(this).val().length;
+    const length = $(this).val().length;
     if (length > 0) {
       $("input").removeClass("input-strobe");
     } else {
@@ -110,8 +110,8 @@ $(document).ready(function () {
   // 显示表上的工具提示
   $(".markup").on("mouseover", "div *", function (e) {
     el = $(this);
-    var markupElements = $(".markup *");
-    var index = markupElements.index(el) - 1;
+    const markupElements = $(".markup *");
+    const index = markupElements.index(el) - 1;
     showTooltip($(".table *").eq(index));
     e.stopPropagation();
   });
@@ -214,9 +214,9 @@ function buildLevelMenu() {
   // 清空菜单
   $(".level-menu .levels").empty();
 
-  for (var i = 0; i < levels.length; i++) {
-    var level = levels[i];
-    var item = document.createElement("a");
+  for (let i = 0; i < levels.length; i++) {
+    const level = levels[i];
+    const item = document.createElement("a");
     $(item).html("<span class='checkmark'></span><span class='level-number'>" + (i + 1) + "</span>" + level.syntax);
     $(".level-menu .levels").append(item);
 
@@ -256,24 +256,24 @@ function showTooltip(el) {
   }
 
   el.attr("data-hovered", true);
-  var tableElements = $(".table *");
-  var index = tableElements.index(el);
+  const tableElements = $(".table *");
+  const index = tableElements.index(el);
   $(".markup > div *").eq(index).addClass("enhance").find("*").addClass(
     "enhance");
 
-  var helper = $(".helper");
+  const helper = $(".helper");
 
-  var pos = el.offset();
+  const pos = el.offset();
   helper.css("top", pos.top - 65);
   helper.css("left", pos.left + (el.width() / 2));
 
-  var helpertext;
+  let helpertext;
 
-  var elType = el.get(0).tagName;
+  let elType = el.get(0).tagName;
   elType = elType.toLowerCase();
   helpertext = '<' + elType;
 
-  var elClass = el.attr("class");
+  let elClass = el.attr("class");
 
   if (elClass) {
     if (elClass.indexOf("strobe") > -1) {
@@ -285,13 +285,13 @@ function showTooltip(el) {
     helpertext = helpertext + ' class="' + elClass + '"';
   }
 
-  var elFor = el.attr("for");
+  const elFor = el.attr("for");
 
   if (elFor) {
     helpertext = helpertext + ' for="' + elFor + '"';
   }
 
-  var id = el.attr("id");
+  const id = el.attr("id");
   if (id) {
     helpertext = helpertext + ' id="' + id + '"';
   }
@@ -306,7 +306,7 @@ function enterHit() {
   $(".enter-button").removeClass("enterhit");
   $(".enter-button").width($(".enter-button").width());
   $(".enter-button").addClass("enterhit");
-  var value = $("input").val();
+  const value = $("input").val();
   handleInput(value);
 }
 
@@ -322,13 +322,13 @@ function handleInput(text) {
 
 function showHelp() {
   // 加载每个级别的帮助文本和示例
-  var helpTitle = level.helpTitle || "";
-  var help = level.help || "";
-  var examples = level.examples || [];
-  var selector = level.selector || "";
-  var syntax = level.syntax || "";
-  var syntaxExample = level.syntaxExample || "";
-  var selectorName = level.selectorName || "";
+  const helpTitle = level.helpTitle || "";
+  const help = level.help || "";
+  const examples = level.examples || [];
+  const selector = level.selector || "";
+  const syntax = level.syntax || "";
+  const syntaxExample = level.syntaxExample || "";
+  const selectorName = level.selectorName || "";
 
   $(".display-help .syntax").html(syntax);
   $(".display-help .syntax-example").html(syntaxExample);
@@ -337,8 +337,8 @@ function showHelp() {
   $(".display-help .examples").html("");
   $(".display-help .examples-title").hide(); // 隐藏标题“examples”
 
-  for (var i = 0; i < examples.length; i++) {
-    var example = $("<div class='example'>" + examples[i] + "</div>");
+  for (let i = 0; i < examples.length; i++) {
+    const example = $("<div class='example'>" + examples[i] + "</div>");
     $(".display-help .examples").append(example);
     $(".display-help .examples-title").show(); // 如果有例子说明
   }
@@ -358,7 +358,7 @@ function resetTable() {
     // TODO - 需要? ?可能不会，所有东西都会被移除
   });
 
-  var tableWidth = $(".table").outerWidth();
+  const tableWidth = $(".table").outerWidth();
   $(".table-wrapper, .table-edge").width(tableWidth);
 }
 
@@ -377,7 +377,7 @@ function fireRule(rule) {
   });
 
   // var baseTable = $('.table-wrapper > .table, .table-wrapper > .nametags, .table-wrapper > .table-surface');
-  var baseTable, ruleSelected, levelSelected = null;
+  let baseTable, ruleSelected, levelSelected = null;
   if (locator_type === CSS) {
     baseTable = $('.table');
     try {
@@ -396,7 +396,7 @@ function fireRule(rule) {
       baseTable);
   }
 
-  var win = false;
+  let win = false;
 
   if (ruleSelected.length === 0) {
     $(".editor").addClass("shake");
@@ -460,7 +460,7 @@ function trackProgress(levelNumber, type) {
     };
   }
 
-  var levelStats = progress[levelNumber];
+  const levelStats = progress[levelNumber];
 
   if (type === "incorrect") {
     if (levelStats.correct === false) {
@@ -488,7 +488,7 @@ function winGame() {
 }
 
 function checkResults(rule) {
-  var ruleTable = $(".table").clone();
+  const ruleTable = $(".table").clone();
   ruleTable.find(".strobe").removeClass("strobe");
   if (locator_type === CSS) {
     ruleTable.find(rule).addClass("strobe");
@@ -499,16 +499,16 @@ function checkResults(rule) {
 }
 
 function getMarkup(el) {
-  var hasChildren = el.children.length > 0;
-  var elName = el.tagName.toLowerCase();
-  var wrapperEl = $("<div/>");
-  var attributeString = "";
+  const hasChildren = el.children.length > 0;
+  const elName = el.tagName.toLowerCase();
+  const wrapperEl = $("<div/>");
+  let attributeString = "";
   $.each(el.attributes, function () {
     if (this.specified) {
       attributeString = attributeString + ' ' + this.name + '="' + this.value + '"';
     }
   });
-  var attributeSpace = "";
+  let attributeSpace = "";
   if (attributeString.length > 0) {
     attributeSpace = " ";
   }
@@ -528,11 +528,11 @@ function loadBoard() {
 
   showHelp();
 
-  var markupHolder = $("<div/>");
+  const markupHolder = $("<div/>");
 
   $(level.boardMarkup).each(function (i, el) {
     if (el.nodeType === 1) {
-      var result = getMarkup(el);
+      const result = getMarkup(el);
       markupHolder.append(result);
     }
   });
@@ -553,11 +553,11 @@ function addNametags() {
 
   $(".table *").each(function () {
     if ($(this).attr("for")) {
-      var pos = $(this).position();
-      var width = $(this).width();
-      var nameTag = $("<div class='nametag'>" + $(this).attr("for") + "</div>");
+      const pos = $(this).position();
+      const width = $(this).width();
+      const nameTag = $("<div class='nametag'>" + $(this).attr("for") + "</div>");
       $(".nametags").append(nameTag);
-      var tagPos = pos.left + (width / 2) - nameTag.width() / 2 + 12;
+      const tagPos = pos.left + (width / 2) - nameTag.width() / 2 + 12;
       nameTag.css("left", tagPos);
     }
   });
@@ -583,7 +583,7 @@ function loadLevel() {
   $(".level-menu .current").removeClass("current");
   $(".level-menu div a").eq(currentLevel).addClass("current");
 
-  var percent = (currentLevel + 1) / levels.length * 100;
+  const percent = (currentLevel + 1) / levels.length * 100;
   $(".progress").css("width", percent + "%");
 
   if (locator_type === XPath) {
@@ -619,19 +619,19 @@ function PopupCenter(url, title, w, h) {
   // 弹出定位
   // http://stackoverflow.com/questions/4068373/center-a-popup-window-on-screen
   // Fixes dual-screen position                         Most browsers      Firefox
-  var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft
+  const dualScreenLeft = window.screenLeft != undefined ? window.screenLeft
     : screen.left;
-  var dualScreenTop = window.screenTop !== undefined ? window.screenTop
+  const dualScreenTop = window.screenTop !== undefined ? window.screenTop
     : screen.top;
 
-  var width = window.innerWidth ? window.innerWidth
+  const width = window.innerWidth ? window.innerWidth
     : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-  var height = window.innerHeight ? window.innerHeight
+  const height = window.innerHeight ? window.innerHeight
     : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
 
-  var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-  var top = ((height / 2) - (h / 2)) + dualScreenTop;
-  var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+  const left = ((width / 2) - (w / 2)) + dualScreenLeft;
+  const top = ((height / 2) - (h / 2)) + dualScreenTop;
+  const newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
 
   // Puts focus on the newWindow
   if (window.focus) {
