@@ -44,9 +44,9 @@ var levels_xpath = [
       '<strong>//ul[@id="long"]</strong> 将选择 <strong>&lt;ul id="long"&gt;</strong>'
     ],
     boardMarkup: `
-<plate id="fancy"></plate>
-<plate></plate>
-<bento></bento>
+    <plate id="fancy"></plate>
+    <plate></plate>
+    <bento></bento>
     `
   },
   {
@@ -60,17 +60,17 @@ var levels_xpath = [
       '<strong>//A/B</strong> 将选择所有 <strong>A</strong> 的所有子元素 <strong>B</strong>'
     ],
     boardMarkup: `
-<plate>
-<bento>
-<apple/>
-</bento>
-</plate>
-<plate>
-<apple/>
-</plate>
-<plate></plate>
-<apple/>
-<apple class="small stuff"/>
+    <plate>
+    <bento>
+    <apple/>
+    </bento>
+    </plate>
+    <plate>
+    <apple/>
+    </plate>
+    <plate></plate>
+    <apple/>
+    <apple class="small stuff"/>
     `
   },
   {
@@ -87,10 +87,10 @@ var levels_xpath = [
     ],
     boardMarkup: `
     <bento></bento>
-<plate>
-<apple/>
-</plate>
-<apple/>
+    <plate>
+    <apple/>
+    </plate>
+    <apple/>
     `
   },
   {
@@ -104,14 +104,14 @@ var levels_xpath = [
     ],
     boardMarkup: `
     <bento>
-<orange/>
-</bento>
-<plate id="fancy">
-<pickle/>
-</plate>
-<plate>
-<pickle/>
-</plate>
+    <orange/>
+    </bento>
+    <plate id="fancy">
+    <pickle/>
+    </plate>
+    <plate>
+    <pickle/>
+    </plate>
     `
   },
   {
@@ -126,11 +126,11 @@ var levels_xpath = [
     ],
     boardMarkup: `
     <apple/>
-<apple class="small stuff"/>
-<plate>
-<apple class="small stuff"/>
-</plate>
-<plate></plate>
+    <apple class="small stuff"/>
+    <plate>
+    <apple class="small stuff"/>
+    </plate>
+    <plate></plate>
     `
   },
   {
@@ -145,16 +145,16 @@ var levels_xpath = [
     ],
     boardMarkup: `
     <apple/>
-<apple class="small stuff"/>
-<bento>
-<orange class="small stuff"/>
-</bento>
-<plate>
-<orange/>
-</plate>
-<plate>
-<orange class="small stuff"/>
-</plate>
+    <apple class="small stuff"/>
+    <bento>
+    <orange class="small stuff"/>
+    </bento>
+    <plate>
+    <orange/>
+    </plate>
+    <plate>
+    <orange class="small stuff"/>
+    </plate>
     `
   },
   {
@@ -164,18 +164,18 @@ var levels_xpath = [
     helpTitle: "你能行...",
     help: '把你在前几级别学到的东西结合起来解决这个问题！',
     boardMarkup: `
-<plate>
-<orange class="small stuff"/>
-</plate>
-<bento>
-<orange class="small stuff"/>
-</bento>
-<bento>
-<orange/>
-</bento>
-<bento>
-<orange class="small stuff"/>
-</bento>
+    <plate>
+    <orange class="small stuff"/>
+    </plate>
+    <bento>
+    <orange class="small stuff"/>
+    </bento>
+    <bento>
+    <orange/>
+    </bento>
+    <bento>
+    <orange class="small stuff"/>
+    </bento>
     `
   },
   {
@@ -190,14 +190,14 @@ var levels_xpath = [
       '<strong>//a|//p|//div</strong> 将选择所有 <tag>a</tag>, <tag>p</tag> 与 <tag>div</tag> 元素'
     ],
     boardMarkup: `
-<pickle/>
-<plate>
-</plate>
-<bento>
-</bento>
-<plate>
-</plate>
-<pickle class="small stuff"/>
+    <pickle/>
+    <plate>
+    </plate>
+    <bento>
+    </bento>
+    <plate>
+    </plate>
+    <pickle class="small stuff"/>
     `
   },
   {
@@ -212,15 +212,15 @@ var levels_xpath = [
     ],
     boardMarkup: `
     <plate id="fancy">
-<orange class="small stuff"/>
-</plate>
-<plate>
-<pickle/>
-</plate>
-<apple class="small stuff"/>
-<plate>
-<apple/>
-</plate>
+    <orange class="small stuff"/>
+    </plate>
+    <plate>
+    <pickle/>
+    </plate>
+    <apple class="small stuff"/>
+    <plate>
+    <apple/>
+    </plate>
     `
   },
   {
@@ -236,14 +236,14 @@ var levels_xpath = [
     ],
     boardMarkup: `
     <bento>
-<apple class="small stuff"/>
-</bento>
-<plate></plate>
-<apple class="small stuff"/>
-<plate></plate>
-<apple/>
-<apple class="small stuff"/>
-<orange class="small stuff"/>
+    <apple class="small stuff"/>
+    </bento>
+    <plate></plate>
+    <apple class="small stuff"/>
+    <plate></plate>
+    <apple/>
+    <apple class="small stuff"/>
+    <orange class="small stuff"/>
     `
   },
   {
@@ -329,16 +329,16 @@ var levels_xpath = [
       '<strong>//*[@id="cool"]/..</strong> 将选择属于 <strong>id="cool"</strong> 的任何元素的父元素'
     ],
     boardMarkup: `
-<bento/>
-<bento>
-<orange/>
-</bento>
-<plate id="fancy">
-<pickle/>
-</plate>
-<plate>
-<pickle/>
-</plate>
+    <bento/>
+    <bento>
+    <orange/>
+    </bento>
+    <plate id="fancy">
+    <pickle/>
+    </plate>
+    <plate>
+    <pickle/>
+    </plate>
     `
   }
 ];
