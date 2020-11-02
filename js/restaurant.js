@@ -79,7 +79,7 @@ $(document).ready(function () {
   });
 
   // 输入框回车键
-  $("input").on("keypress", function (e) {
+  $(".input-key").on("keypress", function (e) {
     e.stopPropagation();
     if (e.keyCode === 13) {
       enterHit();
@@ -87,18 +87,18 @@ $(document).ready(function () {
     }
   });
 
-  $("input").on("keyup", function (e) {
+  $(".input-key").on("keyup", function (e) {
     e.stopPropagation();
     const length = $(this).val().length;
     if (length > 0) {
-      $("input").removeClass("input-strobe");
+      $(".input-key").removeClass("input-strobe");
     } else {
-      $("input").addClass("input-strobe");
+      $(".input-key").addClass("input-strobe");
     }
   });
 
   $(".editor").on("click", function () {
-    $("input").focus();
+    $(".input-key").focus();
   });
 
   // 添加提示
@@ -306,7 +306,7 @@ function enterHit() {
   $(".enter-button").removeClass("enterhit");
   $(".enter-button").width($(".enter-button").width());
   $(".enter-button").addClass("enterhit");
-  const value = $("input").val();
+  const value = $(".input-key").val();
   handleInput(value);
 }
 
@@ -351,7 +351,7 @@ function resetTable() {
   $(".display-help").removeClass("open-help");
   $(".clean,.strobe").removeClass("clean,strobe");
   $(".clean,.strobe").removeClass("clean,strobe");
-  $("input").addClass("input-strobe");
+  $(".input-key").addClass("input-strobe");
   $(".table *").each(function () {
     $(this).width($(this).width());
     // $(this).removeAttr("style");
@@ -409,7 +409,7 @@ function fireRule(rule) {
   if (win) {
     ruleSelected.removeClass("strobe");
     ruleSelected.addClass("clean");
-    $("input").val("");
+    $(".input-key").val("");
     $(".input-wrapper").css("opacity", 0.2);
     updateProgressUI(currentLevel, true);
     currentLevel++;
@@ -600,7 +600,7 @@ function loadLevel() {
   updateProgressUI(currentLevel, checkCompleted(currentLevel));
 
   $(".order").text(level.doThis);
-  $("input").val("").focus();
+  $(".input-key").val("").focus();
 
   $(".input-wrapper").css("opacity", 1);
   $(".result").text("");
